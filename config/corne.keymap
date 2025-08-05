@@ -111,7 +111,7 @@
 &gresc  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &kp PG_UP  &kp HOME  &kp UP           &kp END    &kp DEL          &trans
 &gresc  &kp F5  &kp F6   &kp F7   &kp F8   &trans  &kp PG_DN  &kp LEFT  &kp DOWN         &kp RIGHT  &kp INS          &trans
 &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans     &trans    &kp PRINTSCREEN  &trans     &kp PAUSE_BREAK  &trans
-                         &trans   &to 3    &trans  &mo 1      &trans    &trans
+                         &trans   &mo 3    &trans  &mo 1      &trans    &trans
             >;
         };
 
