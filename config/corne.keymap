@@ -17,11 +17,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <180>;
+            quick-tap-ms = <230>;
+            retro-tap;
         };
 
         ltq: ltq {
@@ -30,8 +31,10 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <160>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <180>;
+            flavor = "balanced";
+            retro-tap;
         };
     };
 
