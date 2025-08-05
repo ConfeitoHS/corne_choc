@@ -27,17 +27,6 @@ config I2C
 config SSD1306
     default y
 
-# Add these lines for Bongo Cat
-config LV_USE_ANIMATION
-    bool
-    default y
-
-config ZMK_WIDGET_BONGO_CAT
-    bool
-    default n
-    select LV_USE_IMG
-    select LV_USE_ANIMATION
-    
 endif # ZMK_DISPLAY
 
 if LVGL
