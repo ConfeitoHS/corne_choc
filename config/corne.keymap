@@ -24,36 +24,26 @@
             quick-tap-ms = <180>;
         };
 
-        ltt: ltt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LTT";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
-            flavor = "tap-preferred";
-        };
-
-        hmh: hmh {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMH";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-
-            quick-tap-ms = <180>;
-        };
-
         ltq: ltq {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <400>;
             flavor = "tap-preferred";
+            quick-tap-ms = <300>;
+        };
+
+        mtq: mtq {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MTQ";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            quick-tap-ms = <300>;
+            flavor = "hold-preferred";
         };
     };
 
@@ -65,10 +55,10 @@
         base {
             display-name = "BASE";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R         &kp T             &kp Y             &kp U         &kp I        &kp O    &kp P          &kp BSPC
-&kp ESC    &kp A  &kp S  &kp D         &kp F         &kp G             &kp H             &kp J         &kp K        &kp L    &kp SEMICOLON  &hm LEFT_GUI SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V         &kp B             &kp N             &kp M         &kp COMMA    &kp DOT  &kp FSLH       &hmh RSHFT RETURN
-                         &kp LEFT_ALT  &ltt 1 SPACE  &hmh LCTRL SPACE  &hmh RSHFT ENTER  &ltt 2 SPACE  &ltq 3 RALT
+&kp TAB    &kp Q  &kp W  &kp E         &kp R        &kp T             &kp Y            &kp U        &kp I        &kp O    &kp P          &kp BSPC
+&kp ESC    &kp A  &kp S  &kp D         &kp F        &kp G             &kp H            &kp J        &kp K        &kp L    &kp SEMICOLON  &mt LEFT_GUI SQT
+&kp LSHFT  &kp Z  &kp X  &kp C         &kp V        &kp B             &kp N            &kp M        &kp COMMA    &kp DOT  &kp FSLH       &mt RSHFT RETURN
+                         &kp LEFT_ALT  &lt 1 SPACE  &mtq LCTRL SPACE  &mt RSHFT ENTER  &lt 2 SPACE  &ltq 3 RALT
             >;
         };
 
