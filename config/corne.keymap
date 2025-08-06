@@ -24,9 +24,9 @@
             quick-tap-ms = <180>;
         };
 
-        ltq: ltq {
+        ltb: ltb {
             compatible = "zmk,behavior-hold-tap";
-            label = "LTQ";
+            label = "LTB";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -35,9 +35,9 @@
             quick-tap-ms = <200>;
         };
 
-        mtq: mtq {
+        mth: mth {
             compatible = "zmk,behavior-hold-tap";
-            label = "MTQ";
+            label = "MTH";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -47,14 +47,25 @@
             hold-while-undecided;
         };
 
-        ltlll: ltlll {
+        lthl: lthl {
             compatible = "zmk,behavior-hold-tap";
-            label = "LTLLL";
+            label = "LTHL";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <1500>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
+            quick-tap-ms = <200>;
+        };
+
+        lth: lth {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTH";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "hold-preferred";
             quick-tap-ms = <200>;
         };
     };
@@ -69,8 +80,8 @@
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R         &kp T             &kp Y             &kp U         &kp I      &kp O    &kp P          &kp BSPC
 &kp ESC    &kp A  &kp S  &kp D     &kp F         &kp G             &kp H             &kp J         &kp K      &kp L    &kp SEMICOLON  &mt LEFT_GUI SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V         &kp B             &kp N             &kp M         &kp COMMA  &kp DOT  &kp FSLH       &mtq RSHFT RETURN
-                         &kp LALT  &ltq 1 SPACE  &mtq LCTRL SPACE  &mtq RSHFT ENTER  &ltq 2 SPACE  &kp RALT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V         &kp B             &kp N             &kp M         &kp COMMA  &kp DOT  &kp FSLH       &mth RSHFT RETURN
+                         &kp LALT  &lth 1 SPACE  &mth LCTRL SPACE  &mth RSHFT ENTER  &lth 2 SPACE  &kp RALT
             >;
         };
 
